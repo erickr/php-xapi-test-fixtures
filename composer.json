@@ -13,8 +13,9 @@
     ],
     "require": {
         "php": "^7.1 || ^8.0",
-        "php-xapi/model": "^1.1 || ^2.0 || ^3.0",
-        "ramsey/uuid": "^2.9 || ^3.0 || ^4.0"
+        "php-xapi/model": "v4.0.0-rc.1 as 4.0.0",
+        "php-xapi/exception": "v1.0.0-rc.1 as 1.0.0",
+        "ramsey/uuid": "^3.0 || ^4.0"
     },
     "conflict": {
         "xabbuh/xapi-data-fixtures": "*"
@@ -24,9 +25,15 @@
             "Xabbuh\\XApi\\DataFixtures\\": "src/"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.2.x-dev"
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-model.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-exception.git"
         }
-    }
+    ]
+
 }
